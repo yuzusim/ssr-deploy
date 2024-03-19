@@ -36,7 +36,7 @@ public class Board {
     private List<Reply> replies = new ArrayList<>();
 
     @Transient // 테이블 생성이 안됨
-    private boolean isOwner;
+    private boolean isBoardOwner;
 
     @Builder
     public Board(Integer id, String title, String content, User user, Timestamp createdAt) {
