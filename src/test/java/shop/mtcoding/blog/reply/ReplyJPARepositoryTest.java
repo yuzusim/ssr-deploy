@@ -6,6 +6,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import shop.mtcoding.blog._core.errors.exception.Exception404;
 import shop.mtcoding.blog.board.Board;
 import shop.mtcoding.blog.board.BoardJPARepository;
+import shop.mtcoding.blog.user.User;
 
 import java.util.List;
 
@@ -19,7 +20,8 @@ public class ReplyJPARepositoryTest {
     @Autowired
     private ReplyJPARepository replyJPARepository;
 
-
+    @Autowired
+    private BoardJPARepository boardJPARepository;
 
     @Test
     public void findByBoardId_test(){

@@ -22,12 +22,18 @@ public class BoardJPARepositoryTest {
     private EntityManager em;
 
     @Test
-    public void findByIdJoinUserAndReplies_test(){
+    public void orp_test(){
         // given
-        int id = 4;
+        Board board = boardJPARepository.findById(4).get();
+        board.getUser().getUsername();
+
+        board.getReplies().forEach(reply -> {
+            reply.getComment();
+        });
+
+        boardJPARepository.delete(board);
 
         // when
-        Board board = boardJPARepository.findByIdJoinUserAndReplies(id).get();
 
         // then
     }
