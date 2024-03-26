@@ -98,7 +98,7 @@ public class BoardJPARepositoryTest {
         List<Board> boardList = boardJPARepository.findAll(sort);
 
         // then
-        System.out.println("findAll_test : " + boardList);
+        // System.out.println("findAll_test : " + boardList);
     }
 
     // deleteById
